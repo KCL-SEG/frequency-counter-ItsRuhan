@@ -2,11 +2,15 @@
 """ENTER YOUR SOLUTION HERE!"""
 
 def frequencies(items):
+
     frequencies = {}
-    # Your code goes here
-    for v in items:
-        v = str(v)
-    frequencies = dict.fromkeys(items, 0)
-    for k, v in frequencies.items():
-        frequencies[k] = items.count(v)
+
+    for item in items:
+        item = str(item)
+
+        if item not in frequencies:
+            frequencies[item] = 0
+
+        frequencies[item] += 1
+
     return frequencies
